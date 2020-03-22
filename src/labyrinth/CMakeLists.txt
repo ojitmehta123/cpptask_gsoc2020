@@ -1,0 +1,1 @@
+add_library(laby SHARED laby.cpp)
