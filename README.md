@@ -51,3 +51,153 @@ TEST (test , LabyTest)
 
 }
 ```
+
+### Testing:
+```bash
+ojit@tyjo:~/temp/task_g/cpp_task/build$ ctest -VV
+UpdateCTestConfiguration  from :/home/ojit/temp/task_g/cpp_task/build/DartConfiguration.tcl
+Parse Config file:/home/ojit/temp/task_g/cpp_task/build/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/ojit/temp/task_g/cpp_task/build/DartConfiguration.tcl
+Parse Config file:/home/ojit/temp/task_g/cpp_task/build/DartConfiguration.tcl
+Test project /home/ojit/temp/task_g/cpp_task/build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: laby_test
+
+1: Test command: /home/ojit/temp/task_g/cpp_task/bin/laby_test
+1: Test timeout computed to be: 1500
+1: [==========] Running 13 tests from 5 test cases.
+1: [----------] Global test environment set-up.
+1: [----------] 5 tests from test1
+1: [ RUN      ] test1.Checkgtest_working
+1: [       OK ] test1.Checkgtest_working (0 ms)
+1: [ RUN      ] test1.NodeTest
+1: [       OK ] test1.NodeTest (0 ms)
+1: [ RUN      ] test1.File_Read
+1: [       OK ] test1.File_Read (10 ms)
+1: [ RUN      ] test1.NeighbourTest
+1: [       OK ] test1.NeighbourTest (0 ms)
+1: [ RUN      ] test1.LabyTest
+1: ----------TEST START----------- 
+1: ##.##.#
+1: #..##.#
+1: #..####
+1: #...##.
+1: ######.
+1: 
+1: 7
+1: #  #  0  #  #  .  #  
+1: #  2  1  #  #  .  #  
+1: #  3  4  #  #  #  #  
+1: #  .  5  6  #  #  .  
+1: #  #  #  #  #  #  .  
+1: ----------TEST OVER----------- 
+1: [       OK ] test1.LabyTest (1 ms)
+1: [----------] 5 tests from test1 (11 ms total)
+1: 
+1: [----------] 2 tests from test2
+1: [ RUN      ] test2.File_Read
+1: [       OK ] test2.File_Read (11 ms)
+1: [ RUN      ] test2.LabyTest
+1: ----------TEST START----------- 
+1: ##.##.#
+1: ##.#..#
+1: ####..#
+1: ##....#
+1: #######
+1: 
+1: 9
+1: #  #  .  #  #  0  #  
+1: #  #  .  #  2  1  #  
+1: #  #  #  #  3  4  #  
+1: #  #  8  7  6  5  #  
+1: #  #  #  #  #  #  #  
+1: ----------TEST OVER----------- 
+1: [       OK ] test2.LabyTest (1 ms)
+1: [----------] 2 tests from test2 (12 ms total)
+1: 
+1: [----------] 2 tests from test3
+1: [ RUN      ] test3.File_Read
+1: [       OK ] test3.File_Read (1 ms)
+1: [ RUN      ] test3.LabyTest
+1: ----------TEST START----------- 
+1: .#.##.#
+1: ......#
+1: ......#
+1: ##....#
+1: #######
+1: 
+1: 18
+1: 0  #  .  #  #  17 #  
+1: 1  4  5  6  7  16 #  
+1: 2  3  10 9  8  15 #  
+1: #  #  11 12 13 14 #  
+1: #  #  #  #  #  #  #  
+1: ----------TEST OVER----------- 
+1: [       OK ] test3.LabyTest (9 ms)
+1: [----------] 2 tests from test3 (10 ms total)
+1: 
+1: [----------] 2 tests from test4
+1: [ RUN      ] test4.File_Read
+1: [       OK ] test4.File_Read (12 ms)
+1: [ RUN      ] test4.LabyTest
+1: ----------TEST START----------- 
+1: ..#..#..#.
+1: .#.##.#...
+1: .#...#..#.
+1: .....#.#..
+1: #......#.#
+1: .#...#...#
+1: ...#...#.#
+1: #..#......
+1: .##.......
+1: ..##..##..
+1: 
+1: 59
+1: 57 58 #  .  .  #  .  .  #  .  
+1: 56 #  .  #  #  .  #  37 36 35 
+1: 55 #  49 48 47 #  39 38 #  34 
+1: 54 53 50 45 46 #  40 #  32 33 
+1: #  52 51 44 43 42 41 #  31 #  
+1: 0  #  6  7  8  #  28 29 30 #  
+1: 1  2  5  #  9  10 27 #  .  #  
+1: #  3  4  #  12 11 26 25 24 23 
+1: .  #  #  .  13 16 17 18 19 22 
+1: .  .  #  #  14 15 #  #  20 21 
+1: ----------TEST OVER----------- 
+1: [       OK ] test4.LabyTest (6512 ms)
+1: [----------] 2 tests from test4 (6524 ms total)
+1: 
+1: [----------] 2 tests from test5
+1: [ RUN      ] test5.File_Read
+1: [       OK ] test5.File_Read (24 ms)
+1: [ RUN      ] test5.LabyTest
+1: ----------TEST START----------- 
+1: ......
+1: ......
+1: ......
+1: ......
+1: 
+1: 24
+1: 0  1  2  3  4  5  
+1: 11 10 9  8  7  6  
+1: 12 13 14 15 16 17 
+1: 23 22 21 20 19 18 
+1: ----------TEST OVER----------- 
+1: [       OK ] test5.LabyTest (235 ms)
+1: [----------] 2 tests from test5 (260 ms total)
+1: 
+1: [----------] Global test environment tear-down
+1: [==========] 13 tests from 5 test cases ran. (6817 ms total)
+1: [  PASSED  ] 13 tests.
+1/1 Test #1: laby_test ........................   Passed    6.87 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   7.04 sec
+```
