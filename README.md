@@ -18,6 +18,7 @@ To use this repo do:
 git clone https://github.com/ojitmehta123/cpptask_gsoc2020.git 
 cd cpptask_gsoc2020
 mkdir build && cd build
+cmake ..
 make
 ctest -VV
 ```
